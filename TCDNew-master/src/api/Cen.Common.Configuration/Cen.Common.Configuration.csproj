@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="NodaTime" Version="3.0.5" />
+        <PackageReference Include="NodaTime.Serialization.SystemTextJson" Version="1.0.0" />
+        <PackageReference Include="Npgsql" Version="5.0.7" />
+        <PackageReference Include="Npgsql.NodaTime" Version="5.0.7" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="5.0.0" />
+        <PackageReference Include="Serilog" Version="2.10.0" />
+        <PackageReference Include="Serilog.Settings.Configuration" Version="3.2.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Cen.Common\Cen.Common.csproj" />
+    </ItemGroup>
+</Project>

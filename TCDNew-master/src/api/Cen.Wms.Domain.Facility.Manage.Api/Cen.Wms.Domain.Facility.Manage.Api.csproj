@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="10.1.1" />
+        <PackageReference Include="FluentValidation" Version="10.3.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Routing" Version="2.2.2" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+        <PackageReference Include="NodaTime" Version="3.0.5" />
+        <PackageReference Include="Npgsql" Version="5.0.7" />
+        <PackageReference Include="Quartz" Version="3.3.3" />
+        <PackageReference Include="Serilog" Version="2.10.0" />
+        <PackageReference Include="SimpleInjector" Version="5.3.2" />
+    </ItemGroup>
+    
+    <ItemGroup>
+        <ProjectReference Include="..\Cen.Common.Data.DataSource.AgGrid\Cen.Common.Data.DataSource.AgGrid.csproj" />
+        <ProjectReference Include="..\Cen.Common.Data.DataSource\Cen.Common.Data.DataSource.csproj" />
+        <ProjectReference Include="..\Cen.Common.Data.EntityFramework\Cen.Common.Data.EntityFramework.csproj" />
+        <ProjectReference Include="..\Cen.Common.Errors\Cen.Common.Errors.csproj" />
+        <ProjectReference Include="..\Cen.Common.Http.Server.CQRS.OpenApi\Cen.Common.Http.Server.CQRS.OpenApi.csproj" />
+        <ProjectReference Include="..\Cen.Common.Http.Server.CQRS\Cen.Common.Http.Server.CQRS.csproj" />
+        <ProjectReference Include="..\Cen.Common.Http.Server\Cen.Common.Http.Server.csproj" />
+        <ProjectReference Include="..\Cen.Wms.Data\Cen.Wms.Data.csproj" />
+        <ProjectReference Include="..\Cen.Wms.Domain.Facility.Manage\Cen.Wms.Domain.Facility.Manage.csproj" />
+    </ItemGroup>
+
+</Project>

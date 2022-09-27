@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Cen.Common.Domain\Cen.Common.Domain.csproj" />
+        <ProjectReference Include="..\Cen.Common.Errors\Cen.Common.Errors.csproj" />
+        <ProjectReference Include="..\Cen.Wms.Data\Cen.Wms.Data.csproj" />
+        <ProjectReference Include="..\Cen.Wms.Domain.Facility.Access\Cen.Wms.Domain.Facility.Access.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="SimpleInjector" Version="5.3.2" />
+        <PackageReference Include="AutoMapper" Version="10.1.1" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+        <PackageReference Include="NewId" Version="3.0.3" />
+    </ItemGroup>
+
+</Project>

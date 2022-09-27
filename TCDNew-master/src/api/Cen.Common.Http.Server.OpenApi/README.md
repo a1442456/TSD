@@ -1,0 +1,1 @@
+based on Carter.OpenApi 5.2.0 (https://github.com/CarterCommunity/Carter/tree/master/src/Carter/OpenApi)

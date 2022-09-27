@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FluentValidation" Version="10.3.3" />
+        <PackageReference Include="NodaTime" Version="3.0.5" />
+        <PackageReference Include="Npgsql" Version="5.0.7" />
+        <PackageReference Include="Quartz" Version="3.3.3" />
+        <PackageReference Include="Serilog" Version="2.10.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Cen.Common.CQRS\Cen.Common.CQRS.csproj" />
+        <ProjectReference Include="..\Cen.Common.Data.DataSource.AgGrid\Cen.Common.Data.DataSource.AgGrid.csproj" />
+        <ProjectReference Include="..\Cen.Common.Data.DataSource\Cen.Common.Data.DataSource.csproj" />
+        <ProjectReference Include="..\Cen.Common.Domain\Cen.Common.Domain.csproj" />
+        <ProjectReference Include="..\Cen.Common\Cen.Common.csproj" />
+        <ProjectReference Include="..\Cen.Wms.Data\Cen.Wms.Data.csproj" />
+        <ProjectReference Include="..\Cen.Wms.Domain.Sync\Cen.Wms.Domain.Sync.csproj" />
+        <ProjectReference Include="..\Novell.Directory.Ldap.NETStandard\Novell.Directory.Ldap.NETStandard.csproj" />
+    </ItemGroup>
+
+</Project>

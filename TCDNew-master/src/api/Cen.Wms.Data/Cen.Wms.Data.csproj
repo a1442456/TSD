@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.9" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.9" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Cen.Common.Data.EntityFramework\Cen.Common.Data.EntityFramework.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.Device.Manage\Cen.Wms.Domain.Device.Manage.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.Facility.Config\Cen.Wms.Domain.Facility.Config.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.Facility.Manage\Cen.Wms.Domain.Facility.Manage.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.User.Config\Cen.Wms.Domain.User.Config.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.User.Manage\Cen.Wms.Domain.User.Manage.csproj" />
+    </ItemGroup>
+</Project>

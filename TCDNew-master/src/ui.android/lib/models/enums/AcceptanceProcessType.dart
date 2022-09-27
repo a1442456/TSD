@@ -1,0 +1,4 @@
+enum AcceptanceProcessType {
+  simple,
+  palletized
+}

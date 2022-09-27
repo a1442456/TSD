@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="SimpleInjector" Version="5.3.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Cen.Wms.Domain.Auth.Providers\Cen.Wms.Domain.Auth.Providers.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.User.Manage\Cen.Wms.Domain.User.Manage.csproj" />
+    </ItemGroup>
+
+</Project>

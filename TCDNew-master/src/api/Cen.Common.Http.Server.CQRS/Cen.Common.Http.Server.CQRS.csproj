@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FluentValidation" Version="10.3.3" />
+      <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+      <PackageReference Include="Serilog" Version="2.10.0" />
+      <PackageReference Include="SimpleInjector" Version="5.3.2" />
+      <PackageReference Include="System.Text.Json" Version="5.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Cen.Common.CQRS\Cen.Common.CQRS.csproj" />
+      <ProjectReference Include="..\Cen.Common.Errors\Cen.Common.Errors.csproj" />
+      <ProjectReference Include="..\Cen.Common.Http.Server\Cen.Common.Http.Server.csproj" />
+    </ItemGroup>
+
+</Project>

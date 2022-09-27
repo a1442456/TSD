@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Routing" Version="2.2.2" />
+        <PackageReference Include="Microsoft.OpenApi" Version="1.2.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Cen.Common.CQRS\Cen.Common.CQRS.csproj" />
+        <ProjectReference Include="..\Cen.Common.Http.Server.CQRS\Cen.Common.Http.Server.CQRS.csproj" />
+        <ProjectReference Include="..\Cen.Common.Http.Server.OpenApi\Cen.Common.Http.Server.OpenApi.csproj" />
+    </ItemGroup>
+
+</Project>

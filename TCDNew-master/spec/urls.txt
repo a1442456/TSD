@@ -1,0 +1,7 @@
+/exec?action=TerminalServer.user_ids_list
+/exec?action=TerminalServer.user_read
+/exec?action=TerminalServer.authenticate
+/exec?action=TerminalServer.facility_ids_list
+/exec?action=TerminalServer.facility_read
+/exec?action=TerminalServer.pac_ids_list
+/exec?action=TerminalServer.pac_read

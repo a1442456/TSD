@@ -1,0 +1,226 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C235092-820C-4DEB-9074-D356FB797D8B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Org.BouncyCastle</RootNamespace>
+    <AssemblyName>BouncyCastle</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FormFactorID>
+    </FormFactorID>
+    <NativePlatformName>Windows CE</NativePlatformName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\lib\net20\</OutputPath>
+    <IntermediateOutputPath>obj\Debug\lib\net20\</IntermediateOutputPath>
+    <DefineConstants>TRACE;DEBUG;INCLUDE_IDEA;NETCF_1_0;NETCF_2_0;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\lib\net20\</OutputPath>
+    <IntermediateOutputPath>obj\Release\lib\net20\</IntermediateOutputPath>
+    <DefineConstants>TRACE;INCLUDE_IDEA;NETCF_2_0;</DefineConstants>
+    <DocumentationFile>doc\BouncyCastle.xml</DocumentationFile>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <NoWarn>1591</NoWarn>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <GenerateSerializationAssemblies>off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\AssemblyInfo.cs" />
+    <Compile Include="src\crypto\AsymmetricCipherKeyPair.cs" />
+    <Compile Include="src\crypto\AsymmetricKeyParameter.cs" />
+    <Compile Include="src\crypto\BufferedAeadBlockCipher.cs" />
+    <Compile Include="src\crypto\BufferedAeadCipher.cs" />
+    <Compile Include="src\crypto\BufferedCipherBase.cs" />
+    <Compile Include="src\crypto\Check.cs" />
+    <Compile Include="src\crypto\CipherKeyGenerator.cs" />
+    <Compile Include="src\crypto\CryptoException.cs" />
+    <Compile Include="src\crypto\DataLengthException.cs" />
+    <Compile Include="src\crypto\digests\GeneralDigest.cs" />
+    <Compile Include="src\crypto\digests\KeccakDigest.cs" />
+    <Compile Include="src\crypto\digests\NonMemoableDigest.cs" />
+    <Compile Include="src\crypto\digests\Sha224Digest.cs" />
+    <Compile Include="src\crypto\digests\Sha256Digest.cs" />
+    <Compile Include="src\crypto\digests\Sha384Digest.cs" />
+    <Compile Include="src\crypto\digests\SHA3Digest.cs" />
+    <Compile Include="src\crypto\digests\Sha512Digest.cs" />
+    <Compile Include="src\crypto\digests\Sha512tDigest.cs" />
+    <Compile Include="src\crypto\digests\ShakeDigest.cs" />
+    <Compile Include="src\crypto\engines\ChaCha7539Engine.cs" />
+    <Compile Include="src\crypto\engines\ChaChaEngine.cs" />
+    <Compile Include="src\crypto\IAsymmetricBlockCipher.cs" />
+    <Compile Include="src\crypto\IAsymmetricCipherKeyPairGenerator.cs" />
+    <Compile Include="src\crypto\IBlockCipher.cs" />
+    <Compile Include="src\crypto\IBufferedCipher.cs" />
+    <Compile Include="src\crypto\ICipherParameters.cs" />
+    <Compile Include="src\crypto\IDigest.cs" />
+    <Compile Include="src\crypto\IEntropySource.cs" />
+    <Compile Include="src\crypto\IEntropySourceProvider.cs" />
+    <Compile Include="src\crypto\IMac.cs" />
+    <Compile Include="src\crypto\io\CipherStream.cs" />
+    <Compile Include="src\crypto\IRawAgreement.cs" />
+    <Compile Include="src\crypto\IStreamCalculator.cs" />
+    <Compile Include="src\crypto\ISigner.cs" />
+    <Compile Include="src\crypto\IStreamCipher.cs" />
+    <Compile Include="src\crypto\IXof.cs" />
+    <Compile Include="src\crypto\InvalidCipherTextException.cs" />
+    <Compile Include="src\crypto\KeyGenerationParameters.cs" />
+    <Compile Include="src\crypto\MaxBytesExceededException.cs" />
+    <Compile Include="src\crypto\modes\IAeadBlockCipher.cs" />
+    <Compile Include="src\crypto\modes\IAeadCipher.cs" />
+    <Compile Include="src\crypto\OutputLengthException.cs" />
+    <Compile Include="src\crypto\parameters\AEADParameters.cs" />
+    <Compile Include="src\crypto\parameters\KeyParameter.cs" />
+    <Compile Include="src\crypto\parameters\ParametersWithIV.cs" />
+    <Compile Include="src\crypto\parameters\ParametersWithRandom.cs" />
+    <Compile Include="src\crypto\prng\CryptoApiEntropySourceProvider.cs" />
+    <Compile Include="src\crypto\prng\CryptoApiRandomGenerator.cs" />
+    <Compile Include="src\crypto\agreement\X25519Agreement.cs" />
+    <Compile Include="src\crypto\agreement\X448Agreement.cs" />
+    <Compile Include="src\crypto\digests\LongDigest.cs" />
+    <Compile Include="src\crypto\digests\NullDigest.cs" />
+    <Compile Include="src\crypto\digests\ShortenedDigest.cs" />
+    <Compile Include="src\crypto\engines\Salsa20Engine.cs" />
+    <Compile Include="src\crypto\engines\XSalsa20Engine.cs" />
+    <Compile Include="src\crypto\generators\Ed25519KeyPairGenerator.cs" />
+    <Compile Include="src\crypto\generators\Ed448KeyPairGenerator.cs" />
+    <Compile Include="src\crypto\generators\Poly1305KeyGenerator.cs" />
+    <Compile Include="src\crypto\generators\X25519KeyPairGenerator.cs" />
+    <Compile Include="src\crypto\generators\X448KeyPairGenerator.cs" />
+    <Compile Include="src\crypto\io\DigestSink.cs" />
+    <Compile Include="src\crypto\io\DigestStream.cs" />
+    <Compile Include="src\crypto\io\MacSink.cs" />
+    <Compile Include="src\crypto\io\MacStream.cs" />
+    <Compile Include="src\crypto\io\SignerSink.cs" />
+    <Compile Include="src\crypto\io\SignerStream.cs" />
+    <Compile Include="src\crypto\macs\Poly1305.cs" />
+    <Compile Include="src\crypto\modes\ChaCha20Poly1305.cs" />
+    <Compile Include="src\crypto\parameters\Ed25519KeyGenerationParameters.cs" />
+    <Compile Include="src\crypto\parameters\Ed25519PrivateKeyParameters.cs" />
+    <Compile Include="src\crypto\parameters\Ed25519PublicKeyParameters.cs" />
+    <Compile Include="src\crypto\parameters\Ed448KeyGenerationParameters.cs" />
+    <Compile Include="src\crypto\parameters\Ed448PrivateKeyParameters.cs" />
+    <Compile Include="src\crypto\parameters\Ed448PublicKeyParameters.cs" />
+    <Compile Include="src\crypto\parameters\X25519KeyGenerationParameters.cs" />
+    <Compile Include="src\crypto\parameters\X25519PrivateKeyParameters.cs" />
+    <Compile Include="src\crypto\parameters\X25519PublicKeyParameters.cs" />
+    <Compile Include="src\crypto\parameters\X448KeyGenerationParameters.cs" />
+    <Compile Include="src\crypto\parameters\X448PrivateKeyParameters.cs" />
+    <Compile Include="src\crypto\parameters\X448PublicKeyParameters.cs" />
+    <Compile Include="src\crypto\prng\BasicEntropySourceProvider.cs" />
+    <Compile Include="src\crypto\prng\DigestRandomGenerator.cs" />
+    <Compile Include="src\crypto\prng\EntropyUtilities.cs" />
+    <Compile Include="src\crypto\prng\IRandomGenerator.cs" />
+    <Compile Include="src\crypto\prng\ReversedWindowGenerator.cs" />
+    <Compile Include="src\crypto\prng\ThreadedSeedGenerator.cs" />
+    <Compile Include="src\crypto\signers\Ed25519ctxSigner.cs" />
+    <Compile Include="src\crypto\signers\Ed25519phSigner.cs" />
+    <Compile Include="src\crypto\signers\Ed25519Signer.cs" />
+    <Compile Include="src\crypto\signers\Ed448phSigner.cs" />
+    <Compile Include="src\crypto\signers\Ed448Signer.cs" />
+    <Compile Include="src\crypto\util\Pack.cs" />
+    <Compile Include="src\math\BigInteger.cs" />
+    <Compile Include="src\math\ec\rfc7748\X25519.cs" />
+    <Compile Include="src\math\ec\rfc7748\X25519Field.cs" />
+    <Compile Include="src\math\ec\rfc7748\X448.cs" />
+    <Compile Include="src\math\ec\rfc7748\X448Field.cs" />
+    <Compile Include="src\math\ec\rfc8032\Ed25519.cs" />
+    <Compile Include="src\math\ec\rfc8032\Ed448.cs" />
+    <Compile Include="src\math\raw\Bits.cs" />
+    <Compile Include="src\math\raw\Interleave.cs" />
+    <Compile Include="src\math\raw\Mod.cs" />
+    <Compile Include="src\math\raw\Nat.cs" />
+    <Compile Include="src\math\raw\Nat128.cs" />
+    <Compile Include="src\math\raw\Nat160.cs" />
+    <Compile Include="src\math\raw\Nat192.cs" />
+    <Compile Include="src\math\raw\Nat224.cs" />
+    <Compile Include="src\math\raw\Nat256.cs" />
+    <Compile Include="src\math\raw\Nat320.cs" />
+    <Compile Include="src\math\raw\Nat384.cs" />
+    <Compile Include="src\math\raw\Nat448.cs" />
+    <Compile Include="src\math\raw\Nat512.cs" />
+    <Compile Include="src\math\raw\Nat576.cs" />
+    <Compile Include="src\security\DigestUtilities.cs" />
+    <Compile Include="src\security\SecureRandom.cs" />
+    <Compile Include="src\security\SecurityUtilityException.cs" />
+    <Compile Include="src\util\Arrays.cs" />
+    <Compile Include="src\util\Enums.cs" />
+    <Compile Include="src\util\IMemoable.cs" />
+    <Compile Include="src\util\Integers.cs" />
+    <Compile Include="src\util\io\BaseInputStream.cs" />
+    <Compile Include="src\util\io\BaseOutputStream.cs" />
+    <Compile Include="src\util\io\FilterStream.cs" />
+    <Compile Include="src\util\io\MemoryInputStream.cs" />
+    <Compile Include="src\util\io\MemoryOutputStream.cs" />
+    <Compile Include="src\util\io\NullOutputStream.cs" />
+    <Compile Include="src\util\io\StreamOverflowException.cs" />
+    <Compile Include="src\util\io\Streams.cs" />
+    <Compile Include="src\util\io\TeeInputStream.cs" />
+    <Compile Include="src\util\io\TeeOutputStream.cs" />
+    <Compile Include="src\util\MemoableResetException.cs" />
+    <Compile Include="src\util\Platform.cs" />
+    <Compile Include="src\util\Strings.cs" />
+    <Compile Include="src\util\Times.cs" />
+    <Compile Include="src\util\collections\CollectionUtilities.cs" />
+    <Compile Include="src\util\collections\EmptyEnumerable.cs" />
+    <Compile Include="src\util\collections\EnumerableProxy.cs" />
+    <Compile Include="src\util\collections\HashSet.cs" />
+    <Compile Include="src\util\collections\ISet.cs" />
+    <Compile Include="src\util\collections\LinkedDictionary.cs" />
+    <Compile Include="src\util\collections\UnmodifiableDictionary.cs" />
+    <Compile Include="src\util\collections\UnmodifiableDictionaryProxy.cs" />
+    <Compile Include="src\util\collections\UnmodifiableList.cs" />
+    <Compile Include="src\util\collections\UnmodifiableListProxy.cs" />
+    <Compile Include="src\util\collections\UnmodifiableSet.cs" />
+    <Compile Include="src\util\collections\UnmodifiableSetProxy.cs" />
+    <Compile Include="src\util\date\DateTimeUtilities.cs" />
+    <Compile Include="src\util\encoders\Base64.cs" />
+    <Compile Include="src\util\encoders\Base64Encoder.cs" />
+    <Compile Include="src\util\encoders\BufferedDecoder.cs" />
+    <Compile Include="src\util\encoders\BufferedEncoder.cs" />
+    <Compile Include="src\util\encoders\Hex.cs" />
+    <Compile Include="src\util\encoders\HexEncoder.cs" />
+    <Compile Include="src\util\encoders\HexTranslator.cs" />
+    <Compile Include="src\util\encoders\IEncoder.cs" />
+    <Compile Include="src\util\encoders\Translator.cs" />
+    <Compile Include="src\util\encoders\UrlBase64.cs" />
+    <Compile Include="src\util\encoders\UrlBase64Encoder.cs" />
+    <Compile Include="src\util\TypeExtensions.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

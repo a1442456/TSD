@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="NodaTime" Version="3.0.5" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Cen.Common.CQRS\Cen.Common.CQRS.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Data\Cen.Wms.Data.csproj" />
+    </ItemGroup>
+
+</Project>

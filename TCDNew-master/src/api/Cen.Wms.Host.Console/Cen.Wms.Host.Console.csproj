@@ -1,0 +1,75 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <OutputType>Exe</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="10.1.1" />
+      <PackageReference Include="AutoMapper.Collection" Version="7.0.1" />
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.9" />
+      <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+      <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="5.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="5.0.0" />
+      <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.12.2" />
+      <PackageReference Include="Serilog" Version="2.10.0" />
+      <PackageReference Include="Serilog.Settings.Configuration" Version="3.2.0" />
+      <PackageReference Include="Serilog.Sinks.Console" Version="4.0.0" />
+      <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+      <PackageReference Include="SimpleInjector" Version="5.3.2" />
+      <PackageReference Include="System.Reflection.TypeExtensions" Version="4.7.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Cen.Common.Configuration\Cen.Common.Configuration.csproj" />
+      <ProjectReference Include="..\Cen.Common.Ioc.Npgsql\Cen.Common.Ioc.Npgsql.csproj" />
+      <ProjectReference Include="..\Cen.Common.Mapping\Cen.Common.Mapping.csproj" />
+      <ProjectReference Include="..\Cen.Common\Cen.Common.csproj" />
+      <ProjectReference Include="..\Cen.IdentityModel.EdDsa\Cen.IdentityModel.EdDsa.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Common\Cen.Wms.Common.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.Auth.Api\Cen.Wms.Domain.Auth.Api.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.Auth.Providers.Fake\Cen.Wms.Domain.Auth.Providers.Fake.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.Auth.Providers.LsFusion\Cen.Wms.Domain.Auth.Providers.LsFusion.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.Device.Manage.Api\Cen.Wms.Domain.Device.Manage.Api.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.Device.Manage.Store.EntityFramework\Cen.Wms.Domain.Device.Manage.Store.EntityFramework.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.Facility.Access.Api\Cen.Wms.Domain.Facility.Access.Api.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.Facility.Access.Store.EntityFramework\Cen.Wms.Domain.Facility.Access.Store.EntityFramework.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.Facility.Config.Api\Cen.Wms.Domain.Facility.Config.Api.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.Facility.Config.Store.EntityFramework\Cen.Wms.Domain.Facility.Config.Store.EntityFramework.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.Facility.Manage.Api\Cen.Wms.Domain.Facility.Manage.Api.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.Facility.Manage.Store.EntityFramework\Cen.Wms.Domain.Facility.Manage.Store.EntityFramework.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.Purchase.Api\Cen.Wms.Domain.Purchase.Api.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.Sync.Api\Cen.Wms.Domain.Sync.Api.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.Sync.Providers.EntityFramework\Cen.Wms.Domain.Sync.Providers.EntityFramework.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.Sync.Providers.Fake\Cen.Wms.Domain.Sync.Providers.Fake.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.Sync.Providers.Internal\Cen.Wms.Domain.Sync.Providers.Internal.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.Sync.Providers.LsFusion\Cen.Wms.Domain.Sync.Providers.LsFusion.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.User.Config.Api\Cen.Wms.Domain.User.Config.Api.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.User.Config.Store.EntityFramework\Cen.Wms.Domain.User.Config.Store.EntityFramework.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.User.Manage.Api\Cen.Wms.Domain.User.Manage.Api.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Domain.User.Manage.Store.EntityFramework\Cen.Wms.Domain.User.Manage.Store.EntityFramework.csproj" />
+      <ProjectReference Include="..\Cen.Wms.Host.Sync\Cen.Wms.Host.Sync.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="appsettings.json" />
+        <Content Include="appsettings.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <None Remove="appsettings.Development.json" />
+        <Content Include="appsettings.Development.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+        <None Remove="appsettings.Production.json" />
+        <Content Include="appsettings.Production.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+</Project>

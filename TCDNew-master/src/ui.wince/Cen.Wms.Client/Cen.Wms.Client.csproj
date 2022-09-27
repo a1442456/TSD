@@ -1,0 +1,370 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D6E2B805-A498-4B2E-A4F4-7C7FE55C1305}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cen.Wms.Client</RootNamespace>
+    <AssemblyName>Cen.Wms.Client</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>WindowsCE</PlatformFamilyName>
+    <PlatformID>E2BECB1F-8C8C-41ba-B736-9BE7D946A398</PlatformID>
+    <OSVersion>5.0</OSVersion>
+    <DeployDirSuffix>Cen.Wms.Client</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FormFactorID>
+    </FormFactorID>
+    <StartupObject>
+    </StartupObject>
+    <NativePlatformName>Windows CE</NativePlatformName>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;$(PlatformFamilyName)</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Datalogic.API, Version=1.12.0.3, Culture=neutral, PublicKeyToken=349bc9cbc540e7eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ref\cf\Datalogic.API.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Windowsce.Forms" />
+    <Reference Include="mscorlib" />
+    <Reference Include="Newtonsoft.Json.Compact, Version=3.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ref\cf\Newtonsoft.Json.Compact.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog, Version=2.1.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\ref\cf\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\Data\Purchase\PurchaseTaskLineReadByBarcode.cs" />
+    <Compile Include="Actions\Data\Purchase\PurchaseTaskFinish.cs" />
+    <Compile Include="Actions\Data\Purchase\PurchaseTaskLineUpdatePost.cs" />
+    <Compile Include="Actions\Data\Purchase\PurchaseTaskListReadByPerson.cs" />
+    <Compile Include="Actions\Data\Purchase\PurchaseTaskUpdateRead.cs" />
+    <Compile Include="Actions\Data\Settings\FacilityListSimpleReadByPerson.cs" />
+    <Compile Include="Actions\Data\Settings\FacilityConfigGet.cs" />
+    <Compile Include="Actions\Operation\FacilitySelectAndSet.cs" />
+    <Compile Include="Actions\Operation\PurchaseTaskAcceptByTask.cs" />
+    <Compile Include="Actions\UI\Purchase\BarcodePalletScan.cs" />
+    <Compile Include="Actions\UI\Purchase\PurchaseTaskWait.cs" />
+    <Compile Include="Actions\UI\Settings\FacilitySelect.cs" />
+    <Compile Include="Actions\UI\Settings\SettingsEdit.cs" />
+    <Compile Include="Actions\UI\Utility\TimeSync.cs" />
+    <Compile Include="App.cs" />
+    <Compile Include="Common\Consts.cs" />
+    <Compile Include="Forms\Purchase\CheckGood.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase\CheckGood.Designer.cs">
+      <DependentUpon>CheckGood.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Purchase\PurchaseTaskWaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase\PurchaseTaskWaitForm.Designer.cs">
+      <DependentUpon>PurchaseTaskWaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\FacilitySelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\FacilitySelectForm.Designer.cs">
+      <DependentUpon>FacilitySelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Settings\SettingsEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings\SettingsEditForm.Designer.cs">
+      <DependentUpon>SettingsEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Utility\GosZnakMessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Utility\GosZnakMessageForm.Designer.cs">
+      <DependentUpon>GosZnakMessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dtos\FacilityConfigEditModel.cs" />
+    <Compile Include="Models\Dtos\GosZNKAK\authDto.cs" />
+    <Compile Include="Models\Dtos\GosZNKAK\GosZnakError.cs" />
+    <Compile Include="Models\Dtos\GosZNKAK\LabelsDto.cs" />
+    <Compile Include="Models\Dtos\PurchaseTaskDto.cs" />
+    <Compile Include="Models\Dtos\PurchaseTaskLineStateDto.cs" />
+    <Compile Include="Models\Dtos\PurchaseTaskLineUpdateDto.cs" />
+    <Compile Include="Models\Dtos\PurchaseTaskPalletDto.cs" />
+    <Compile Include="Models\Dtos\PurchaseTaskUpdateDto.cs" />
+    <Compile Include="Models\Dtos\PurchaseTaskLineReadByBarcodeReq.cs" />
+    <Compile Include="Models\Dtos\PurchaseTaskLineUpdatePostReq.cs" />
+    <Compile Include="Models\Dtos\PurchaseTaskUpdateReadReq.cs" />
+    <Compile Include="Models\Dtos\ByIdReq.cs" />
+    <Compile Include="Models\Dtos\PurchaseTaskFinishReq.cs" />
+    <Compile Include="Models\Dtos\PurchaseTaskListReadByPersonReq.cs" />
+    <Compile Include="Models\Dtos\ViewModelSimple.cs" />
+    <Compile Include="Models\Enums\AcceptanceProcessType.cs" />
+    <Compile Include="Models\Enums\PurchaseTaskLineUpdateType.cs" />
+    <Compile Include="Models\State\SettingsApp.cs" />
+    <Compile Include="Models\State\SettingsFacility.cs" />
+    <Compile Include="Models\State\SettingsUser.cs" />
+    <Compile Include="Models\State\StateAuth.cs" />
+    <Compile Include="Services\GosZNAK.cs" />
+    <Compile Include="Services\GStateProvider.cs" />
+    <Compile Include="Utils\EdDsaHelpers.cs" />
+    <Compile Include="Utils\HexStringConverter.cs" />
+    <Compile Include="Utils\JsonHelpers.cs" />
+    <Compile Include="Utils\RemoteCall.cs" />
+    <Compile Include="Models\Rpc\RpcError.cs" />
+    <Compile Include="Models\Exceptions\RpcException.cs" />
+    <Compile Include="Models\Rpc\RpcResponse.cs" />
+    <Compile Include="Utils\TimeUtils.cs" />
+    <Compile Include="Utils\UnixDateTimeConverter.cs" />
+    <Compile Include="Common\Messages.cs" />
+    <Compile Include="Models\Dtos\ProductDto.cs" />
+    <Compile Include="Models\Dtos\PacHeadDto.cs" />
+    <Compile Include="Models\Dtos\PacKeyDto.cs" />
+    <Compile Include="Models\Dtos\PurchaseTaskLineDto.cs" />
+    <Compile Include="Models\Dtos\PacHeadReadByBarcodeReq.cs" />
+    <Compile Include="Models\Dtos\PurchaseTaskCreateFromPacsReq.cs" />
+    <Compile Include="Models\Enums\TaskType.cs" />
+    <Compile Include="Models\Dtos\UserCredentials.cs" />
+    <Compile Include="Models\Dtos\UserTokenResp.cs" />
+    <Compile Include="Services\RpcService.cs" />
+    <Compile Include="Common\Urls.cs" />
+    <Compile Include="Services\PurchaseTaskStateView.cs" />
+    <Compile Include="Actions\Data\Auth\UserLogin.cs" />
+    <Compile Include="Actions\Operation\ApplicationLogin.cs" />
+    <Compile Include="Actions\Operation\PurchaseTaskAcceptByPapers.cs" />
+    <Compile Include="Actions\Operation\ExecuteTask.cs" />
+    <Compile Include="Actions\UI\Auth\AskForUserCredentials.cs" />
+    <Compile Include="Actions\UI\Purchase\PurchaseTaskPause.cs" />
+    <Compile Include="Actions\UI\Purchase\BarcodeInput.cs" />
+    <Compile Include="Actions\UI\Purchase\PurchaseTaskLineEdit.cs" />
+    <Compile Include="Actions\UI\Purchase\PacHeadScan.cs" />
+    <Compile Include="Actions\Data\Purchase\PurchaseTaskCreateFromPacs.cs" />
+    <Compile Include="Actions\UI\Purchase\PacHeadConfirmSelection.cs" />
+    <Compile Include="Actions\Data\Purchase\PacHeadReadByBarcode.cs" />
+    <Compile Include="Actions\UI\Purchase\PurchaseTaskConfirmDiffCount.cs" />
+    <Compile Include="Actions\UI\Utility\ShowModalDialog.cs" />
+    <Compile Include="Actions\UI\Utility\ShowModalMessage.cs" />
+    <Compile Include="Actions\UI\Utility\Beep.cs" />
+    <Compile Include="Controls\Grid\IRowDrawer.cs" />
+    <Compile Include="Controls\Grid\RowDrawerPurchaseTaskLine.cs" />
+    <Compile Include="Controls\Grid\ScrollControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\Grid\Scroller.cs" />
+    <Compile Include="Controls\Grid\VGrid.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase\BarcodePalletScanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase\BarcodePalletScanForm.designer.cs">
+      <DependentUpon>BarcodePalletScanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Utility\DialogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Utility\DialogForm.Designer.cs">
+      <DependentUpon>DialogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\GdiEx.cs" />
+    <Compile Include="Forms\Common\ScanBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase\BarcodeInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase\BarcodeInputForm.Designer.cs">
+      <DependentUpon>BarcodeInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Utility\MessageForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Utility\MessageForm.Designer.cs">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Purchase\PurchaseTaskPauseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase\PurchaseTaskPauseForm.Designer.cs">
+      <DependentUpon>PurchaseTaskPauseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Auth\UserCredentialsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Auth\UserCredentialsForm.Designer.cs">
+      <DependentUpon>UserCredentialsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Purchase\PacScanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase\PacScanForm.Designer.cs">
+      <DependentUpon>PacScanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Purchase\PurchaseTaskContentScanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase\PurchaseTaskContentScanForm.Designer.cs">
+      <DependentUpon>PurchaseTaskContentScanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Purchase\PacConfirmSelectionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase\PacConfirmSelectionForm.Designer.cs">
+      <DependentUpon>PacConfirmSelectionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Purchase\PurchaseTaskLineEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Purchase\PurchaseTaskLineEditForm.Designer.cs">
+      <DependentUpon>PurchaseTaskLineEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Task\TaskSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Task\TaskSelectForm.Designer.cs">
+      <DependentUpon>TaskSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Auth\WelcomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Auth\WelcomeForm.Designer.cs">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Purchase\BarcodePalletScanForm.resx">
+      <DependentUpon>BarcodePalletScanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchase\CheckGood.resx">
+      <DependentUpon>CheckGood.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchase\PurchaseTaskWaitForm.resx">
+      <DependentUpon>PurchaseTaskWaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\FacilitySelectForm.resx">
+      <DependentUpon>FacilitySelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings\SettingsEditForm.resx">
+      <DependentUpon>SettingsEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Utility\DialogForm.resx">
+      <DependentUpon>DialogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Common\ScanBaseForm.resx">
+      <DependentUpon>ScanBaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchase\BarcodeInputForm.resx">
+      <DependentUpon>BarcodeInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Utility\MessageForm.resx">
+      <DependentUpon>MessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchase\PurchaseTaskPauseForm.resx">
+      <DependentUpon>PurchaseTaskPauseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Auth\UserCredentialsForm.resx">
+      <DependentUpon>UserCredentialsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchase\PacScanForm.resx">
+      <DependentUpon>PacScanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchase\PurchaseTaskContentScanForm.resx">
+      <DependentUpon>PurchaseTaskContentScanForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchase\PacConfirmSelectionForm.resx">
+      <DependentUpon>PacConfirmSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Purchase\PurchaseTaskLineEditForm.resx">
+      <DependentUpon>PurchaseTaskLineEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Task\TaskSelectForm.resx">
+      <DependentUpon>TaskSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Auth\WelcomeForm.resx">
+      <DependentUpon>WelcomeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Utility\GosZnakMessageForm.resx">
+      <DependentUpon>GosZnakMessageForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Actions\UI\Purchase\PurchaseTaskContentScan.cs" />
+    <Compile Include="Actions\UI\Task\AskForTaskType.cs" />
+    <Compile Include="Settings.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BouncyCastle\BouncyCastle.csproj">
+      <Project>{4C235092-820C-4DEB-9074-D356FB797D8B}</Project>
+      <Name>BouncyCastle</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cen.Wms.Client.Common\Cen.Wms.Client.Common.csproj">
+      <Project>{D6C57A67-9AC5-4E44-8D26-47D1044242ED}</Project>
+      <Name>Cen.Wms.Client.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="NLog.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>xcopy C:\Users\it3m\Downloads\TCDNew-master\TCDNew-master\src\ui.wince\Cen.Wms.Client\bin\Debug\Cen.Wms.Client.dll \\172.16.7.45\shu\transfer\SH/d /r /y
+xcopy C:\Users\it3m\Downloads\TCDNew-master\TCDNew-master\src\ui.wince\Cen.Wms.Client\bin\Debug\Cen.Wms.Client.pdb \\172.16.7.45\shu\transfer\SH /d /r /y</PostBuildEvent>
+  </PropertyGroup>
+</Project>
