@@ -162,9 +162,11 @@ namespace Cen.Wms.Client.Forms.Purchase
         {   
             if (barcode.Length > 15) //13+CR+LF
             {
+                //Удалить суффикс CR+LF
                 string barcodeTrimmed = string.Empty;
                 for (int i = 0; i < barcode.Length - 2; i++)
                     barcodeTrimmed += barcode[i];
+
                 GosZNAKLabels lblInfo = new GosZNAKLabels();
                 _znakService.GetLabels(barcodeTrimmed, _gosZnakToken);
             }

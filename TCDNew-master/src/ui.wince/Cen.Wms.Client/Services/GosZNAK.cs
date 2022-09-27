@@ -65,7 +65,7 @@ namespace Cen.Wms.Client.Services
             httpWebRequest = (HttpWebRequest)WebRequest.Create(url);
             httpWebRequest.ContentType = "application/json; charset=utf-8";
             httpWebRequest.Headers.Add("Token", token);
-            httpWebRequest.Timeout = 10000;
+            httpWebRequest.Timeout = 45000;
 
             httpWebRequest.Method = "POST";
             string serializedObj = JsonConvert.SerializeObject(sendedObj);
@@ -90,8 +90,8 @@ namespace Cen.Wms.Client.Services
             }
             catch (Exception ex)
             {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-                System.Windows.Forms.MessageBox.Show("Ошибка при получении ответа от маркировки");
+                //System.Windows.Forms.MessageBox.Show(ex.Message);
+                //System.Windows.Forms.MessageBox.Show("Ошибка при получении ответа от маркировки");
                 return string.Empty;
             }
 
@@ -126,8 +126,13 @@ namespace Cen.Wms.Client.Services
                 }
             }
             catch (Exception ex)
-            {   
+            {
+                var logger = LogManager.GetLogger(Messages.LoggerNetName);
+                logger.Error(ex);
                 System.Windows.Forms.MessageBox.Show(ex.Message);
+                 ShowModalMessage.Run("Маркировка(Ошибка)",
+                    "Превышено время ожидания ответа от сервиса.",
+                    Color.Coral);
             }
         }
 

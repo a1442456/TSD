@@ -364,7 +364,7 @@
   </Target>
   -->
   <PropertyGroup>
-    <PostBuildEvent>xcopy C:\Users\it3m\Downloads\TCDNew-master\TCDNew-master\src\ui.wince\Cen.Wms.Client\bin\Debug\Cen.Wms.Client.dll \\172.16.7.45\shu\transfer\SH/d /r /y
-xcopy C:\Users\it3m\Downloads\TCDNew-master\TCDNew-master\src\ui.wince\Cen.Wms.Client\bin\Debug\Cen.Wms.Client.pdb \\172.16.7.45\shu\transfer\SH /d /r /y</PostBuildEvent>
+    <PostBuildEvent>xcopy D:\projects\Priemka\GIT\TCDNew-master\src\ui.wince\Cen.Wms.Client\bin\Debug\Cen.Wms.Client.dll \\172.16.7.45\shu\transfer\SH/d /r /y
+xcopy D:\projects\Priemka\GIT\TCDNew-master\src\ui.wince\Cen.Wms.Client\bin\Debug\Cen.Wms.Client.pdb \\172.16.7.45\shu\transfer\SH /d /r /y</PostBuildEvent>
   </PropertyGroup>
 </Project>
